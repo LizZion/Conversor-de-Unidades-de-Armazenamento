@@ -79,18 +79,3 @@ def PBParaTB(valorInicial):
     print('Conversão executada (PB PARA TB)')
     valorFinalTB = valorInicial * valorPadrão
     return print(valorFinalTB)
-
-print('Por favor, insira o valor a ser convertido: ')
-valorInput  = stringParaFloat(input())
-bitParaByte(valorInput)
-byteParaBit(valorInput)
-ByteParaKByte(valorInput)
-KByteParaByte(valorInput)
-KByteParaMB(valorInput)
-MBParaKByte(valorInput)
-MBParaGB(valorInput)
-GBParaMB(valorInput)
-GBParaTB(valorInput)
-TBParaGB(valorInput)
-TBParaPB(valorInput)
-PBParaTB(valorInput)
