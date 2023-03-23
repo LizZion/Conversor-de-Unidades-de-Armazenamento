@@ -5,7 +5,7 @@ valorPadrão = 1024
 # String para Float
 
 def stringParaFloat(value):
-    print('TRANSFORMANDO STRING EM FLOAT... CONCLUÍDO!)')
+    print('TRANSFORMANDO STRING EM FLOAT... CONCLUÍDO!')
     return float(value)
 
 # Byte para Bit / Bit para Byte
