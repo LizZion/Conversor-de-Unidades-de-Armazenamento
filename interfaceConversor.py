@@ -1,4 +1,4 @@
-from conversorArmazenamento import conversor, stringParaFloat, listaUnidades
+from conversorArmazenamento import conversor, listaUnidades
 valorInicial = input("Insira o valor a ser convertido: ")
 unidade1 = input(f"Insira a unidade inicial {listaUnidades}: ")
 

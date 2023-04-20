@@ -1,9 +1,6 @@
 valorPadrão = 1024
 listaUnidades = ["bit","byte","kilobyte","megabyte","gigabyte","terabyte","petabyte"]
 
-def stringParaFloat(value):
-    return float(value)
-
 def conversor(valorInicial,unidade1,unidade2):
     print(f'Conversão executada ({unidade1} PARA {unidade2})')
     valorFinal = valorInicial
