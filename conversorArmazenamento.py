@@ -1,65 +1,21 @@
 valorPadrão = 1024
+listaUnidades = ["bit","byte","kilobyte","megabyte","gigabyte","terabyte","petabyte"]
 
 def stringParaFloat(value):
-    print('TRANSFORMANDO STRING EM FLOAT... CONCLUÍDO!')
     return float(value)
 
-def bitParaByte(valorInicial):
-    print('Conversão executada (BIT PARA BYTE)')
-    valorFinalByte = valorInicial / 8
-    return print(valorFinalByte)
-
-def byteParaBit(valorInicial):
-    print('Conversão executada (BYTE PARA BIT)')
-    valorFinalBit = valorInicial * 8
-    return print(valorFinalBit)
-
-def ByteParaKByte(valorInicial):
-    print('Conversão executada (BYTE PARA KBYTE)')
-    valorFinalKByte = valorInicial / valorPadrão
-    return print(valorFinalKByte)
-
-def KByteParaByte(valorInicial):
-    print('Conversão executada (KBYTE PARA BYTE)')
-    valorFinalByte = valorInicial * valorPadrão
-    return print(valorFinalByte)
-
-def KByteParaMB(valorInicial):
-    print('Conversão executada (KB PARA MB)')
-    valorFinalMB = valorInicial / valorPadrão
-    return print(valorFinalMB)
-
-def MBParaKByte(valorInicial):
-    print('Conversão executada (MB PARA KB)')
-    valorFinalKByte = valorInicial * valorPadrão
-    return print(valorFinalKByte)
-
-def MBParaGB(valorInicial):
-    print('Conversão executada (MB PARA GB)')
-    valorFinalGB = valorInicial / valorPadrão
-    return print(valorFinalGB)
-
-def GBParaMB(valorInicial):
-    print('Conversão executada (GB PARA MB)')
-    valorFinalMB = valorInicial * valorPadrão
-    return print(valorFinalMB)
-
-def GBParaTB(valorInicial):
-    print('Conversão executada (GB PARA TB)')
-    valorFinalTB = valorInicial / valorPadrão
-    return print(valorFinalTB)
-
-def TBParaGB(valorInicial):
-    print('Conversão executada (TB PARA GB)')
-    valorFinalGB = valorInicial * valorPadrão
-    return print(valorFinalGB)
-
-def TBParaPB(valorInicial):
-    print('Conversão executada (TB PARA PB)')
-    valorFinalPB = valorInicial / valorPadrão
-    return print(valorFinalPB)
-
-def PBParaTB(valorInicial):
-    print('Conversão executada (PB PARA TB)')
-    valorFinalTB = valorInicial * valorPadrão
-    return print(valorFinalTB)
+def conversor(valorInicial,unidade1,unidade2):
+    print(f'Conversão executada ({unidade1} PARA {unidade2})')
+    valorFinal = valorInicial
+    if(unidade1 == "bit"):
+        valorFinal = valorFinal / 8
+        unidade1 = "byte"
+    if(listaUnidades.index(unidade1) < listaUnidades.index(unidade2)):
+        for i in range(listaUnidades.index(unidade1), listaUnidades.index(unidade2)):
+            valorFinal = valorFinal / valorPadrão
+    else:
+        for i in range(listaUnidades.index(unidade1), listaUnidades.index(unidade2),-1):
+            valorFinal = valorFinal * valorPadrão
+        if(unidade2 == "bit"):
+            valorFinal = (valorFinal / valorPadrão) * 8
+    return print(valorFinal)
